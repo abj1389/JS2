@@ -40,7 +40,41 @@ let array1 = [1,4,5,7];
 let array2 = [2,1,5,1,1];
 
 let sumArray = (array1, array2) => {
-    
+    let i = array1.length;
+    let j = array2.length;
+    let sumArray = [];
+    while (i < j) {
+        array1.push(0);
+        i++;
+    }
+    while (i > j) {
+        array2.push(0);
+        i--;
+    }
+    for (let i = 0; i < array1.length; i++) {
+        sumArray[i] = array1[i] + array2[i];
+    }
+    return sumArray;
 }
 
 console.log(sumArray(array1, array2));
+
+/*
+    Un palíndromo es una palabra que se deletrea de la misma manera en ambos sentidos.
+    Crea una función que reciba una palabra y devuelva true o false si es o no palíndromo.
+
+    Ejemplo:
+        Entrada: 'oso'
+        Salida: true
+*/
+
+let esPalindromo = (word) => {
+    let rWord = word;
+    
+    rWord.reverse();
+    console.log(word + " " + rWord);
+}
+let p = "osos";
+p.r;
+console.log(p);
+//console.log(esPalindromo("osos"));
